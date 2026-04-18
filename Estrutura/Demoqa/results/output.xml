@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-30T18:02:25.994009" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro" source="C:\Users\Usuario\Documents\Codigos\Robot Framework\Estrutura\Demoqa\suites\cadastro">
+<suite id="s1-s1" name="Cadastro" source="C:\Users\Usuario\Documents\Codigos\Robot Framework\Estrutura\Demoqa\suites\cadastro\cadastro.robot">
+<test id="s1-s1-t1" name="Cenário 1: Preencher Campos" line="6">
+<kw name="Dado que eu acesso o site" owner="formulario_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:26.138190" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<arg>${geral. URL}</arg>
+<arg>${geral. Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-30T18:02:26.137577" elapsed="8.666289"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-30T18:02:34.804091" elapsed="0.024010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T18:02:35.829090" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T18:02:34.828317" elapsed="1.000894"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:26.137045" elapsed="9.692287"/>
+</kw>
+<kw name="Quando digito nome e sobrenome" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:35.830703" level="INFO">Typing text 'Daniel' into text field '//input[@placeholder="First Name"]'.</msg>
+<arg>${formulario. PrimeiroNome}</arg>
+<arg>${dados_registro. nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:35.830003" elapsed="0.059754"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:35.890607" level="INFO">Typing text 'Silveira' into text field '//input[@placeholder="Last Name"]'.</msg>
+<arg>${formulario. UltimoNome}</arg>
+<arg>${dados_registro. sobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:35.889949" elapsed="0.043620"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:35.829704" elapsed="0.104017"/>
+</kw>
+<kw name="E digito o email" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:35.934758" level="INFO">Typing text 'ysilveira@yahoo.com.br' into text field '//input[@placeholder="name@example.com"]'.</msg>
+<arg>${formulario. Email}</arg>
+<arg>${dados_registro. meuEmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:35.934240" elapsed="0.050957"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:35.934008" elapsed="0.051327"/>
+</kw>
+<kw name="E seleciono o sexo" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. Male}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:35.985941" elapsed="0.012588"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:35.999123" level="INFO">Clicking element '//label[@for="gender-radio-1"]'.</msg>
+<arg>${formulario. Male}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:35.998727" elapsed="0.034219"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:35.985673" elapsed="0.047432"/>
+</kw>
+<kw name="E seleciono meu telefone" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.034490" level="INFO">Typing text '21974557813' into text field '//input[@id="userNumber"]'.</msg>
+<arg>${formulario. telefone}</arg>
+<arg>${dados_registro. meuTelefone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.033684" elapsed="0.047744"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:36.033422" elapsed="0.048149"/>
+</kw>
+<kw name="E coloco a data do meu data do meu aniversario" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. DataDeAniversario}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.082132" elapsed="0.017589"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.100581" level="INFO">Clicking element '//input[@id="dateOfBirthInput"]'.</msg>
+<arg>${formulario. DataDeAniversario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.099974" elapsed="0.074511"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.175297" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__month-select']' by value 10.</msg>
+<arg>${formulario. selecionarMes}</arg>
+<arg>${dados_registro. mes}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.174678" elapsed="0.053945"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.229365" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__year-select']' by value 1996.</msg>
+<arg>${formulario. selecionarAno}</arg>
+<arg>${dados_registro. ano}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.228781" elapsed="0.037892"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. selecionarDia}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.266837" elapsed="0.017526"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.284953" level="INFO">Clicking element '//div[@aria-label='Choose Sunday, November 10th, 1996']'.</msg>
+<arg>${formulario. selecionarDia}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.284522" elapsed="0.035086"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:36.081900" elapsed="0.237814"/>
+</kw>
+<kw name="E digito algum assunto" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:36.320784" level="INFO">Typing text 'Concluido' into text field '//input[@id="subjectsInput"]'.</msg>
+<arg>${formulario. digitaAssunto}</arg>
+<arg>${dados_registro. assunto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.320271" elapsed="0.053924"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T18:02:39.374748" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T18:02:36.374356" elapsed="3.000510"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:36.320015" elapsed="3.054948"/>
+</kw>
+<kw name="E seleciono meu hobbie" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. Hobbies}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.375565" elapsed="0.010365"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:39.386465" level="INFO">Clicking element '//label[@for="hobbies-checkbox-1"]'.</msg>
+<arg>${formulario. Hobbies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.386076" elapsed="0.032544"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:39.375301" elapsed="0.043446"/>
+</kw>
+<kw name="E carrego uma imagem" owner="formulario_page">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:39.420219" level="INFO">Sending C:\Users\Usuario\Downloads\pexels-parimoofarhaan-32105666.jpg to browser.</msg>
+<arg>${formulario. Imagem}</arg>
+<arg>${formulario. upload}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.419404" elapsed="0.019540"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:39.419068" elapsed="0.019974"/>
+</kw>
+<kw name="E digito uma descricao" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. digitaDescricao}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.439577" elapsed="0.010507"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:39.450939" level="INFO">Typing text 'Eu vou ser o melhor nisso aqui' into text field '//textarea[@placeholder="Current Address"]'.</msg>
+<arg>${formulario. digitaDescricao}</arg>
+<arg>${dados_registro. descricao}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.450239" elapsed="0.052436"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:39.503496" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>${formulario. sroll_fim_pagina}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.502891" elapsed="0.003580"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T18:02:40.507280" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T18:02:39.506595" elapsed="1.000799"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:39.439373" elapsed="1.068119"/>
+</kw>
+<kw name="E seleciono estado e cidade" owner="formulario_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.508499" level="INFO">Clicking element '//div[@id="state"]'.</msg>
+<arg>${formulario. dropdownEstado}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.508125" elapsed="0.036048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.544964" level="INFO">Typing text 'NCR' into text field '//div[@id="state"]//input'.</msg>
+<arg>${formulario. selecionarEstado}</arg>
+<arg>${dados_registro. estado}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.544395" elapsed="0.033306"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.578220" level="INFO">Clicking element '(//div[contains(@class,'menu')]//div[contains(@class,'option')])[1]'.</msg>
+<arg>${formulario. confirmarEstado}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.577860" elapsed="0.035960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. dropdownCidade}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.614027" elapsed="0.010950"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.625507" level="INFO">Clicking element '//div[@id="city"]'.</msg>
+<arg>${formulario. dropdownCidade}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.625129" elapsed="0.029609"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.655435" level="INFO">Typing text 'Noida' into text field '//div[@id="city"]//input'.</msg>
+<arg>${formulario. selecionarCidade}</arg>
+<arg>${dados_registro. cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.654901" elapsed="0.036693"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:40.692121" level="INFO">Clicking element '(//div[contains(@class,'menu')]//div[contains(@class,'option')])[1]'.</msg>
+<arg>${formulario. confirmarCidade}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.691756" elapsed="0.029832"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T18:02:43.722571" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T18:02:40.721782" elapsed="3.000903"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:40.507856" elapsed="3.214929"/>
+</kw>
+<kw name="Entao clico em submit" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${formulario. botaoSubmit}</arg>
+<arg>5S</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T18:02:43.723385" elapsed="0.010053"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T18:02:43.733952" level="INFO">Clicking element '//button[@id="submit"]'.</msg>
+<arg>${formulario. botaoSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T18:02:43.733581" elapsed="0.041509"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T18:02:48.776220" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T18:02:43.775402" elapsed="5.000953"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-30T18:02:48.776523" elapsed="2.115314"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:43.723111" elapsed="7.168846"/>
+</kw>
+<status status="PASS" start="2026-01-30T18:02:26.136496" elapsed="24.755692"/>
+</test>
+<status status="PASS" start="2026-01-30T18:02:26.017988" elapsed="24.874700"/>
+</suite>
+<status status="PASS" start="2026-01-30T18:02:25.995089" elapsed="24.898108"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cadastro" id="s1" pass="1" fail="0" skip="0">Cadastro</stat>
+<stat name="Cadastro" id="s1-s1" pass="1" fail="0" skip="0">Cadastro.Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

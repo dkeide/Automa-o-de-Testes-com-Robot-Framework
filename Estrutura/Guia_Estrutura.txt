@@ -1,0 +1,125 @@
+ESTRUTURA PADRÃO – ROBOT FRAMEWORK
+=================================
+
+CRIAMOS 3 PASTAS NA RAIZ DO PROJETO:
+----------------------------------
+
+1) resources/
+2) results/
+3) suites/
+
+
+----------------------------------
+PASTA: resources/
+----------------------------------
+Responsável por TUDO que dá suporte aos testes
+(libraries, variáveis, páginas, keywords reutilizáveis)
+
+Na RAIZ da pasta resources criamos:
+
+- main.robot
+  → Arquivo central do projeto
+  → Contém:
+     - Libraries (SeleniumLibrary, etc)
+     - Resource de Data
+     - Resource de Pages
+     - Resource Shared (quando existir)
+  → Evita repetição de imports nos testes
+
+
+Dentro de resources temos 3 subpastas:
+----------------------------------
+
+1) resources/data/
+------------------
+Responsável por DADOS do projeto
+
+Arquivos criados aqui:
+
+- geral.robot
+   → Contém configurações globais:
+      - URL do sistema
+      - Browser (chrome, edge, etc)
+
+- registro.robot
+   → Contém os DADOS DO TESTE:
+      - Nome
+      - Email
+      - Telefone
+      - Cidade
+      - Estado
+      - Qualquer dado usado nos cenários
+
+(Separar dados facilita manutenção e reutilização)
+
+
+2) resources/pages/
+-------------------
+Responsável pelas PÁGINAS do sistema
+
+Aqui ficam:
+- XPaths / Locators
+- Keywords da página
+- Ações do formulário
+
+Exemplo:
+- formulario.robot
+   → Locators dos campos
+   → Keywords para preencher e enviar formulário
+   → Segue padrão Page Object
+
+
+3) resources/shared/
+--------------------
+Responsável por código COMPARTILHADO
+
+Uso comum:
+- Keywords genéricas
+- Ações reutilizáveis entre páginas
+- Ex: scroll, clique com JavaScript, waits customizados
+
+(Ainda não criado, mas reservado para crescimento do projeto)
+
+
+----------------------------------
+PASTA: results/
+----------------------------------
+Responsável pelos RESULTADOS da execução
+
+Aqui ficam:
+- log.html
+- report.html
+- output.xml
+
+→ Relatórios
+→ Logs de erro
+→ Evidências de execução
+
+
+----------------------------------
+PASTA: suites/
+----------------------------------
+Responsável pelos TEST CASES
+
+Aqui ficam:
+- Arquivos .robot com os cenários
+- BDD ou testes tradicionais
+- Chamam keywords das Pages e dados da Data
+
+Exemplo:
+- cadastro.robot
+   → Cenário 1: Preencher Formulário
+   → Cenário 2: Validar campos obrigatórios
+
+
+----------------------------------
+RESUMO MENTAL (DECORAR):
+----------------------------------
+resources = suporte
+data      = dados
+  geral   = config
+  registro= dados do teste
+pages     = páginas + locators
+shared    = reutilizável
+suites    = testes
+results   = relatórios

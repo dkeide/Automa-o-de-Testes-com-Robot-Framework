@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-28T21:25:35.869002" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro" source="C:\Users\Usuario\Documents\Codigos\Robot Framework\Estrutura\Facebook\suites\cadastro">
+<suite id="s1-s1" name="Cadastro" source="C:\Users\Usuario\Documents\Codigos\Robot Framework\Estrutura\Facebook\suites\cadastro\cadastro.robot">
+<test id="s1-s1-t1" name="Cenário 1: Fazer uma conta no Facebook" line="6">
+<kw name="Dado que eu acesso o site do facebook" owner="formulario_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:36.008897" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<arg>${geral. URL}</arg>
+<arg>${geral. Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-28T21:25:36.008291" elapsed="1.177298"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:36.007755" elapsed="1.177996"/>
+</kw>
+<kw name="Quando clico em criar nova conta" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Cadastro. botaoNovaconta}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.186334" elapsed="0.013882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.200785" level="INFO">Clicking element '//a[@href="/r.php?entry_point=login"]'.</msg>
+<arg>${Cadastro. botaoNovaconta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.200391" elapsed="0.576526"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:37.186055" elapsed="0.590986"/>
+</kw>
+<kw name="E digito o nome e o sobrenome" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Cadastro. nome}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.777515" elapsed="0.013412"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.791619" level="INFO">Typing text 'Ayrl' into text field '//input[@name="firstname"]'.</msg>
+<arg>${Cadastro. nome}</arg>
+<arg>${dados_registro. nomeFacebook}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.791083" elapsed="0.053671"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.845476" level="INFO">Typing text 'Stark' into text field '//input[@name="lastname"]'.</msg>
+<arg>${Cadastro. sobrenome}</arg>
+<arg>${dados_registro. sobrenomeFacebook}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.844912" elapsed="0.040730"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:37.777305" elapsed="0.108440"/>
+</kw>
+<kw name="E seleciono a data do meu aniversario" owner="formulario_page">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.886616" level="INFO">Selecting options from selection list '//select[@id="day"]' by value 13.</msg>
+<arg>${Cadastro. dia}</arg>
+<arg>13</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.886230" elapsed="0.043827"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.930965" level="INFO">Selecting options from selection list '//select[@id="month"]' by value 1.</msg>
+<arg>${Cadastro. mes}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.930251" elapsed="0.021777"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.952589" level="INFO">Selecting options from selection list '//select[@id="year"]' by value 2013.</msg>
+<arg>${Cadastro. ano}</arg>
+<arg>2013</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.952180" elapsed="0.034940"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:37.886004" elapsed="0.101225"/>
+</kw>
+<kw name="E seleciono o meu genero" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Cadastro. masculino}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.987732" elapsed="0.009234"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:37.997574" level="INFO">Clicking element '//label[@class="_58mt"]//input[@value="2"]'.</msg>
+<arg>${Cadastro. masculino}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:37.997140" elapsed="0.049946"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:37.987487" elapsed="0.059701"/>
+</kw>
+<kw name="E coloco meu numero de telefone" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:38.048234" level="INFO">Typing text '21974557423' into text field '//input[@name="reg_email__"]'.</msg>
+<arg>${Cadastro. celular}</arg>
+<arg>${dados_registro. telefoneFacebook}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:38.047695" elapsed="0.050472"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:38.047449" elapsed="0.050836"/>
+</kw>
+<kw name="E cadastro uma senha" owner="formulario_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:38.099369" level="INFO">Typing text 'brasilhexa89' into text field '//input[@name="reg_passwd__"]'.</msg>
+<arg>${Cadastro. senha}</arg>
+<arg>${dados_registro. senhaFacebook}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:38.098814" elapsed="0.042144"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:38.098573" elapsed="0.042489"/>
+</kw>
+<kw name="Entao finalizo o cadastro apertando o botao de cadastrar" owner="formulario_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Cadastro. botaoCadastrar}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-28T21:25:38.141691" elapsed="0.010240"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-28T21:25:38.152508" level="INFO">Clicking element '//button[@name="websubmit"]'.</msg>
+<arg>${Cadastro. botaoCadastrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-28T21:25:38.152105" elapsed="0.035482"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-28T21:25:43.188175" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-28T21:25:38.187748" elapsed="5.000543"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-28T21:25:43.188454" elapsed="2.107679"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:38.141354" elapsed="7.154898"/>
+</kw>
+<status status="PASS" start="2026-01-28T21:25:36.007117" elapsed="9.289374"/>
+</test>
+<status status="PASS" start="2026-01-28T21:25:35.893012" elapsed="9.404111"/>
+</suite>
+<status status="PASS" start="2026-01-28T21:25:35.870082" elapsed="9.427657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cadastro" id="s1" pass="1" fail="0" skip="0">Cadastro</stat>
+<stat name="Cadastro" id="s1-s1" pass="1" fail="0" skip="0">Cadastro.Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
